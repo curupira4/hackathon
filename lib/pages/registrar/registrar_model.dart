@@ -1,4 +1,5 @@
 import '/flutter_flow/flutter_flow_util.dart';
+import '/index.dart';
 import 'registrar_widget.dart' show RegistrarWidget;
 import 'package:flutter/material.dart';
 

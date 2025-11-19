@@ -2,6 +2,7 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'registrar_model.dart';
@@ -132,7 +133,7 @@ class _RegistrarWidgetState extends State<RegistrarWidget> {
                                               borderRadius:
                                                   BorderRadius.circular(24.0),
                                               child: Image.asset(
-                                                'assets/images/WhatsApp_Image_2025-11-19_at_13.52.50.jpeg',
+                                                'assets/images/WhatsApp_Image_2025-11-19_at_13.52.50-removebg-preview.png',
                                                 width: 200.0,
                                                 height: 200.0,
                                                 fit: BoxFit.cover,
@@ -1146,21 +1147,20 @@ class _RegistrarWidgetState extends State<RegistrarWidget> {
                                               ].divide(SizedBox(width: 16.0)),
                                             ),
                                           ),
-                                          Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    24.0, 0.0, 24.0, 0.0),
+                                          Align(
+                                            alignment: AlignmentDirectional(
+                                                -0.33, -0.08),
                                             child: FFButtonWidget(
-                                              onPressed: () {
-                                                print('Button pressed ...');
+                                              onPressed: () async {
+                                                context.pushNamed(
+                                                    Home2acessoWidget
+                                                        .routeName);
                                               },
-                                              text: 'Registrar',
+                                              text: 'REGISTRAR',
                                               options: FFButtonOptions(
-                                                width: double.infinity,
+                                                width: 320.0,
                                                 height: 56.0,
-                                                padding: EdgeInsetsDirectional
-                                                    .fromSTEB(
-                                                        24.0, 0.0, 24.0, 0.0),
+                                                padding: EdgeInsets.all(8.0),
                                                 iconPadding:
                                                     EdgeInsetsDirectional
                                                         .fromSTEB(
@@ -1168,44 +1168,36 @@ class _RegistrarWidgetState extends State<RegistrarWidget> {
                                                 color: Color(0xFFFF5722),
                                                 textStyle: FlutterFlowTheme.of(
                                                         context)
-                                                    .titleSmall
+                                                    .titleMedium
                                                     .override(
                                                       font:
                                                           GoogleFonts.readexPro(
                                                         fontWeight:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .titleSmall
-                                                                .fontWeight,
+                                                            FontWeight.w600,
                                                         fontStyle:
                                                             FlutterFlowTheme.of(
                                                                     context)
-                                                                .titleSmall
+                                                                .titleMedium
                                                                 .fontStyle,
                                                       ),
-                                                      color:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .primaryText,
+                                                      color: Colors.white,
+                                                      fontSize: 18.0,
                                                       letterSpacing: 0.0,
                                                       fontWeight:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .titleSmall
-                                                              .fontWeight,
+                                                          FontWeight.w600,
                                                       fontStyle:
                                                           FlutterFlowTheme.of(
                                                                   context)
-                                                              .titleSmall
+                                                              .titleMedium
                                                               .fontStyle,
                                                     ),
-                                                elevation: 0.0,
+                                                elevation: 2.0,
                                                 borderSide: BorderSide(
                                                   color: Colors.transparent,
                                                   width: 1.0,
                                                 ),
                                                 borderRadius:
-                                                    BorderRadius.circular(8.0),
+                                                    BorderRadius.circular(12.0),
                                               ),
                                             ),
                                           ),
@@ -1234,7 +1226,7 @@ class _RegistrarWidgetState extends State<RegistrarWidget> {
                       borderRadius: 20.0,
                       borderWidth: 1.0,
                       buttonSize: 40.0,
-                      fillColor: FlutterFlowTheme.of(context).accent1,
+                      fillColor: Color(0xFFFF5722),
                       icon: Icon(
                         Icons.arrow_back,
                         color: FlutterFlowTheme.of(context).primaryText,

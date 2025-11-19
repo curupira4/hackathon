@@ -1,5 +1,5 @@
 import '/flutter_flow/flutter_flow_google_map.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/pages/localizao/localizao_widget.dart';
 import 'package:flutter/material.dart';
@@ -48,91 +48,95 @@ class _MapaWidgetState extends State<MapaWidget> {
         backgroundColor: Color(0xFF2D5A3D),
         body: SafeArea(
           top: true,
-          child: Column(
-            mainAxisSize: MainAxisSize.max,
+          child: Stack(
             children: [
-              Container(
-                width: double.infinity,
-                decoration: BoxDecoration(),
-                child: Container(
-                  height: 800.0,
-                  child: Stack(
-                    children: [
-                      Stack(
+              Column(
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  Container(
+                    width: double.infinity,
+                    decoration: BoxDecoration(),
+                    child: Container(
+                      height: 800.0,
+                      child: Stack(
                         children: [
-                          Align(
-                            alignment: AlignmentDirectional(0.0, 0.0),
-                            child: FlutterFlowGoogleMap(
-                              controller: _model.googleMapsController,
-                              onCameraIdle: (latLng) =>
-                                  _model.googleMapsCenter = latLng,
-                              initialLocation: _model.googleMapsCenter ??=
-                                  LatLng(-6.261389, -50.803333),
-                              markerColor: GoogleMarkerColor.violet,
-                              mapType: MapType.satellite,
-                              style: GoogleMapStyle.standard,
-                              initialZoom: 15.0,
-                              allowInteraction: false,
-                              allowZoom: false,
-                              showZoomControls: false,
-                              showLocation: false,
-                              showCompass: false,
-                              showMapToolbar: false,
-                              showTraffic: false,
-                              centerMapOnMarkerTap: false,
-                              mapTakesGesturePreference: false,
-                            ),
-                          ),
-                          Align(
-                            alignment: AlignmentDirectional(-0.02, 0.86),
-                            child: PointerInterceptor(
-                              intercepting: isWeb,
-                              child: wrapWithModel(
-                                model: _model.localizaoModel,
-                                updateCallback: () => safeSetState(() {}),
-                                child: LocalizaoWidget(),
-                              ),
-                            ),
-                          ),
-                          Align(
-                            alignment: AlignmentDirectional(-0.89, -0.94),
-                            child: PointerInterceptor(
-                              intercepting: isWeb,
-                              child: Container(
-                                width: 50.0,
-                                height: 50.0,
-                                decoration: BoxDecoration(
-                                  color: FlutterFlowTheme.of(context)
-                                      .secondaryBackground,
-                                  borderRadius: BorderRadius.circular(6.0),
-                                  shape: BoxShape.rectangle,
+                          Stack(
+                            children: [
+                              Align(
+                                alignment: AlignmentDirectional(0.0, 0.0),
+                                child: FlutterFlowGoogleMap(
+                                  controller: _model.googleMapsController,
+                                  onCameraIdle: (latLng) =>
+                                      _model.googleMapsCenter = latLng,
+                                  initialLocation: _model.googleMapsCenter ??=
+                                      LatLng(-6.261389, -50.803333),
+                                  markerColor: GoogleMarkerColor.violet,
+                                  mapType: MapType.satellite,
+                                  style: GoogleMapStyle.standard,
+                                  initialZoom: 15.0,
+                                  allowInteraction: false,
+                                  allowZoom: false,
+                                  showZoomControls: false,
+                                  showLocation: false,
+                                  showCompass: false,
+                                  showMapToolbar: false,
+                                  showTraffic: false,
+                                  centerMapOnMarkerTap: false,
+                                  mapTakesGesturePreference: false,
                                 ),
                               ),
-                            ),
-                          ),
-                          Align(
-                            alignment: AlignmentDirectional(-0.87, -0.93),
-                            child: PointerInterceptor(
-                              intercepting: isWeb,
-                              child: InkWell(
-                                splashColor: Colors.transparent,
-                                focusColor: Colors.transparent,
-                                hoverColor: Colors.transparent,
-                                highlightColor: Colors.transparent,
-                                onTap: () async {
-                                  context.safePop();
-                                },
-                                child: Icon(
-                                  Icons.arrow_back,
-                                  color: Color(0xFFFF5722),
-                                  size: 40.0,
+                              Align(
+                                alignment: AlignmentDirectional(-0.02, 0.86),
+                                child: PointerInterceptor(
+                                  intercepting: isWeb,
+                                  child: wrapWithModel(
+                                    model: _model.localizaoModel,
+                                    updateCallback: () => safeSetState(() {}),
+                                    child: LocalizaoWidget(),
+                                  ),
                                 ),
                               ),
-                            ),
+                              Align(
+                                alignment: AlignmentDirectional(0.88, -0.97),
+                                child: PointerInterceptor(
+                                  intercepting: isWeb,
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(8.0),
+                                    child: Image.asset(
+                                      'assets/images/WhatsApp_Image_2025-11-19_at_13.52.50-removebg-preview.png',
+                                      width: 60.0,
+                                      height: 60.0,
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
                         ],
                       ),
-                    ],
+                    ),
+                  ),
+                ],
+              ),
+              Align(
+                alignment: AlignmentDirectional(-1.01, -1.01),
+                child: Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(24.0, 24.0, 0.0, 0.0),
+                  child: FlutterFlowIconButton(
+                    borderColor: Colors.white,
+                    borderRadius: 20.0,
+                    borderWidth: 1.0,
+                    buttonSize: 40.0,
+                    fillColor: Color(0xFFFF5722),
+                    icon: Icon(
+                      Icons.arrow_back,
+                      color: Colors.white,
+                      size: 24.0,
+                    ),
+                    onPressed: () async {
+                      context.safePop();
+                    },
                   ),
                 ),
               ),

@@ -216,9 +216,9 @@ class _Home2acessoWidgetState extends State<Home2acessoWidget> {
                       alignment: AlignmentDirectional(-0.33, -0.08),
                       child: FFButtonWidget(
                         onPressed: () async {
-                          context.pushNamed(MapaWidget.routeName);
+                          context.pushNamed(DenunciaWidget.routeName);
                         },
-                        text: 'VER MAPA',
+                        text: 'DENUNCIAR',
                         options: FFButtonOptions(
                           width: 320.0,
                           height: 56.0,
@@ -255,7 +255,7 @@ class _Home2acessoWidgetState extends State<Home2acessoWidget> {
                       alignment: AlignmentDirectional(-0.33, -0.08),
                       child: FFButtonWidget(
                         onPressed: () async {
-                          context.pushNamed(MapaWidget.routeName);
+                          context.pushNamed(SinaisWidget.routeName);
                         },
                         text: 'SINAIS DA MATA',
                         options: FFButtonOptions(

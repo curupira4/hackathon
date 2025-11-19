@@ -1,9 +1,8 @@
-import '/auth/supabase_auth/auth_util.dart';
-import '/backend/supabase/supabase.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'login_model.dart';
@@ -85,7 +84,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                   ClipRRect(
                                     borderRadius: BorderRadius.circular(8.0),
                                     child: Image.asset(
-                                      'assets/images/WhatsApp_Image_2025-11-19_at_00.25.43.jpeg',
+                                      'assets/images/WhatsApp_Image_2025-11-19_at_13.52.50-removebg-preview.png',
                                       height: 180.36,
                                       fit: BoxFit.cover,
                                       alignment: Alignment(0.0, 0.0),
@@ -655,53 +654,43 @@ class _LoginWidgetState extends State<LoginWidget> {
                                           ),
                                         ),
                                       ),
-                                      Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 16.0, 0.0, 24.0),
+                                      Align(
+                                        alignment:
+                                            AlignmentDirectional(-0.33, -0.08),
                                         child: FFButtonWidget(
                                           onPressed: () async {
-                                            _model.usuarioEncontrado =
-                                                await CadastroTable().queryRows(
-                                              queryFn: (q) => q.eqOrNull(
-                                                'user_id',
-                                                currentUserUid,
-                                              ),
-                                            );
-
-                                            safeSetState(() {});
+                                            context.pushNamed(
+                                                Home2acessoWidget.routeName);
                                           },
-                                          text: 'Entrar',
+                                          text: 'LOGIN',
                                           options: FFButtonOptions(
-                                            width: double.infinity,
-                                            height: 48.0,
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 0.0, 0.0, 0.0),
+                                            width: 300.0,
+                                            height: 50.0,
+                                            padding: EdgeInsets.all(8.0),
                                             iconPadding:
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 0.0, 0.0),
-                                            color: FlutterFlowTheme.of(context)
-                                                .primary,
+                                            color: Color(0xFFFF5722),
                                             textStyle: FlutterFlowTheme.of(
                                                     context)
-                                                .titleSmall
+                                                .titleMedium
                                                 .override(
-                                                  font: GoogleFonts.notoSansHk(
-                                                    fontWeight:
-                                                        FontWeight.normal,
+                                                  font: GoogleFonts.readexPro(
+                                                    fontWeight: FontWeight.w600,
                                                     fontStyle:
                                                         FlutterFlowTheme.of(
                                                                 context)
-                                                            .titleSmall
+                                                            .titleMedium
                                                             .fontStyle,
                                                   ),
                                                   color: Colors.white,
+                                                  fontSize: 18.0,
                                                   letterSpacing: 0.0,
-                                                  fontWeight: FontWeight.normal,
+                                                  fontWeight: FontWeight.w600,
                                                   fontStyle:
                                                       FlutterFlowTheme.of(
                                                               context)
-                                                          .titleSmall
+                                                          .titleMedium
                                                           .fontStyle,
                                                 ),
                                             elevation: 2.0,
@@ -710,7 +699,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                               width: 1.0,
                                             ),
                                             borderRadius:
-                                                BorderRadius.circular(4.0),
+                                                BorderRadius.circular(12.0),
                                           ),
                                         ),
                                       ),
